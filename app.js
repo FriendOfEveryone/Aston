@@ -5,7 +5,7 @@ console.log(2 + "2" - 2);
 console.log("Third commit");
 var isValid = function (number, base) {
     if (base === void 0) { base = ''; }
-    if (base == "base") {
+    if (base) {
         return (typeof (+number) == "number" && +number % 1 === 0 && number >= 2 && number <= 36);
     }
     else {
@@ -27,7 +27,7 @@ var myPrompt = function () {
         }
     }
     while (true) {
-        base = prompt("Enter your number");
+        base = prompt("Enter your base from 2 to 36");
         if (base == null)
             return alert("bye-bye");
         if (!isValid(base, "base")) {
