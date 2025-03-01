@@ -12,7 +12,7 @@ var isValid = function (number, base) {
         return (typeof (+number) == "number" && +number % 1 === 0);
     }
 };
-function myPrompt() {
+var myPrompt = function () {
     var myNumber;
     var base;
     while (true) {
@@ -37,7 +37,7 @@ function myPrompt() {
             break;
         }
     }
-    var result = parseInt(myNumber).toString(Number(base));
+    var result = parseInt(myNumber).toString(+base);
     alert("The number ".concat(myNumber, " in base ").concat(base, " is ").concat(result, "."));
-}
+};
 myPrompt();

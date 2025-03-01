@@ -14,7 +14,7 @@ const isValid = (number: any, base: "" | "base" = ''): boolean => {
     }
 }
 
-function myPrompt() {
+const myPrompt = () => {
     let myNumber: any;
     let base: any;
     while (true) {
@@ -35,7 +35,7 @@ function myPrompt() {
             break;
         }
     }
-    const result = parseInt(myNumber).toString(Number(base));
+    const result = parseInt(myNumber).toString(+base);
     alert(`The number ${myNumber} in base ${base} is ${result}.`);
 }
 
