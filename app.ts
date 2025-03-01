@@ -36,7 +36,7 @@ const myPrompt = () => {
         }
     }
     const result = parseInt(myNumber).toString(+base);
-    alert(`The number ${myNumber} in base ${base} is ${result}.`);
+    alert(`The number ${myNumber} in base ${base} is ${result}`);
 }
 
 myPrompt()

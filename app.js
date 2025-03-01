@@ -38,6 +38,6 @@ var myPrompt = function () {
         }
     }
     var result = parseInt(myNumber).toString(+base);
-    alert("The number ".concat(myNumber, " in base ").concat(base, " is ").concat(result, "."));
+    alert("The number ".concat(myNumber, " in base ").concat(base, " is ").concat(result));
 };
 myPrompt();
