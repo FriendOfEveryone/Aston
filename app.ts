@@ -94,12 +94,12 @@ const arrObj: MyObject[] = [
     {name: 'Tom', age: '35'},
 ]
 
-const searchFunc3 = (item: MyObject, param: string) => {
+const searchFunc = (item: MyObject, param: string) => {
     console.log(item[param]);
 }
 
-arrObj.forEach(item => searchFunc3(item, 'age'))
-arrObj.forEach(item => searchFunc3(item, 'name'))
+arrObj.forEach(item => searchFunc(item, 'age'))
+arrObj.forEach(item => searchFunc(item, 'name'))
 
 // 4
 

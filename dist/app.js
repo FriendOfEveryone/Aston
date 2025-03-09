@@ -70,11 +70,11 @@ const arrObj = [
     { name: 'Ann', age: '30' },
     { name: 'Tom', age: '35' },
 ];
-const searchFunc3 = (item, param) => {
+const searchFunc = (item, param) => {
     console.log(item[param]);
 };
-arrObj.forEach(item => searchFunc3(item, 'age'));
-arrObj.forEach(item => searchFunc3(item, 'name'));
+arrObj.forEach(item => searchFunc(item, 'age'));
+arrObj.forEach(item => searchFunc(item, 'name'));
 // 4
 const str = 'My Happy Hell';
 const reverseString = (srt) => {
