@@ -7,7 +7,6 @@ const originalObj = {
     }
 };
 let newObj = {};
-
 function deepCopy(obj) {
     if (obj === null || typeof obj !== 'object') {
         return obj;
@@ -21,7 +20,6 @@ function deepCopy(obj) {
     });
     return copy;
 }
-
 newObj = deepCopy(originalObj);
 newObj.a = 10;
 newObj.b.c = 11;
@@ -32,7 +30,7 @@ console.log('newObj: ', newObj.b.c);
 // 2
 const array = [1, 5, 3, 7, 1, -5];
 const invalidArray = [1, 5, 3, "7", 1, -5];
-const objForInterval = {f: 2, t: 5};
+const objForInterval = { f: 2, t: 5 };
 let newArray;
 const selectFromInterval = (arr, a, b) => {
     if (!Array.isArray(arr)) {
@@ -52,7 +50,8 @@ const selectFromInterval = (arr, a, b) => {
     if (a <= b) {
         from = a;
         to = b;
-    } else {
+    }
+    else {
         from = b;
         to = a;
     }
@@ -67,15 +66,17 @@ console.log('newArray: ', newArray); // must be "First parameter must be an arra
 newArray = selectFromInterval(array, 4.4, 1);
 console.log('newArray: ', newArray); //  must be "Incorrect input parameters!"
 const arrObj = [
-    {name: 'Bob', age: '25'},
-    {name: 'Ann', age: '30'},
-    {name: 'Tom', age: '35'},
+    { name: 'Bob', age: '25' },
+    { name: 'Ann', age: '30' },
+    { name: 'Tom', age: '35' },
 ];
-const searchFunc = (item, param) => {
-    console.log(item[param]);
+const searchFunc = (someKey) => {
+    return (item) => {
+        console.log(item[someKey]);
+    };
 };
-arrObj.forEach(item => searchFunc(item, 'age'));
-arrObj.forEach(item => searchFunc(item, 'name'));
+arrObj.forEach(searchFunc('age'));
+arrObj.forEach(searchFunc('name'));
 // 4
 const str = 'My Happy Hell';
 const reverseString = (srt) => {
