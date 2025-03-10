@@ -94,8 +94,8 @@ const arrObj: MyObject[] = [
     {name: 'Tom', age: '35'},
 ]
 
-const searchFunc = (someKey: any) => {
-    return (item: any) => {
+const searchFunc = (someKey: string) => {
+    return (item: MyObject) => {
         console.log(item[someKey]);
     }
 }
